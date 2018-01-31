@@ -1,45 +1,70 @@
 //小车前进与后退
-//时间20120902
-int PWM1=11;  //ena port
-int in1=7; //IN1　port 
-int in2=6;  //IN2  port
-int PWM2=10;  //enb port
-int in3=5;  //in3 port
-int in4=4; //in4 port
+
+int in1 = 0;
+int in2 = 1;
+int in3 = 2;
+int in4 = 3;
+int in5 = 4;
+int in6 = 5;
+int in7 = 6;
+int in8 = 7;
+
+int en1 = 8;
+int en2 = 9;
+int en3 = 10;
+int en4 = 11;
 
 void setup()
 {   
-pinMode(PWM1, OUTPUT); //定义PWM输出
+pinMode(en1, OUTPUT); //定义PWM输出
 pinMode(in1, OUTPUT);     
 pinMode(in2, OUTPUT);     
-pinMode(PWM2, OUTPUT); //定义PWM输出
+pinMode(en2, OUTPUT); //定义PWM输出
 pinMode(in3, OUTPUT);   
 pinMode(in4, OUTPUT);  
+pinMode(en3, OUTPUT); //定义PWM输出
+pinMode(in5, OUTPUT);   
+pinMode(in6, OUTPUT);  
+pinMode(en4, OUTPUT); //定义PWM输出
+pinMode(in7, OUTPUT);   
+pinMode(in8, OUTPUT);  
 } 
 void advance()//前进
 {
-  digitalWrite(PWM1,HIGH);
-  digitalWrite(PWM2,HIGH);
+  digitalWrite(en1,HIGH);
+  digitalWrite(en2,HIGH);
+  digitalWrite(en3,HIGH);
+  digitalWrite(en4,HIGH);  
   digitalWrite(in1,HIGH);
   digitalWrite(in2,LOW);
   digitalWrite(in3,HIGH);
   digitalWrite(in4,LOW);
+  digitalWrite(in5,HIGH);
+  digitalWrite(in6,LOW);
+  digitalWrite(in7,HIGH);
+  digitalWrite(in8,LOW);
 }
  void back()//后退
 {
-  digitalWrite(PWM1,HIGH);
-  digitalWrite(PWM2,HIGH);
-  digitalWrite(in1,LOW);
-  digitalWrite(in2,HIGH);
-  digitalWrite(in3,LOW);
-  digitalWrite(in4,HIGH);
+  digitalWrite(en1,HIGH);
+  digitalWrite(en2,HIGH);
+  digitalWrite(en3,HIGH);
+  digitalWrite(en4,HIGH);  
+  digitalWrite(in1,HIGH);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,HIGH);
+  digitalWrite(in4,LOW);
+  digitalWrite(in5,HIGH);
+  digitalWrite(in6,LOW);
+  digitalWrite(in7,HIGH);
+  digitalWrite(in8,LOW);
 }
 void loop() 
 {
     advance();//小车前进
    delay(10000);//延迟1秒
-    back();//小车后退
-   delay(10000);//延迟1秒
+   // back();//小车后退
+   //delay(10000);//延迟1秒
 }
 //http://yfrobot.taobao.com/
 //YFRobot配件中心
