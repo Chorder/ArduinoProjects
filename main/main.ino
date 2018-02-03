@@ -1,9 +1,9 @@
 #include <PS2X_lib.h>
 
-#define PS2_DAT   A0
-#define PS2_CMD   A1
-#define PS2_SEL   A2
-#define PS2_CLK   A3
+#define PS2_DAT   A2
+#define PS2_CMD   A3
+#define PS2_SEL   A4
+#define PS2_CLK   A5
 
 
 int in1 = 2;
@@ -238,7 +238,7 @@ void loop() {
   }
 
   if (ps2x.ButtonPressed(PSB_CIRCLE)) {   //will be TRUE if button was JUST pressed
-    advance();
+    forward();
     Serial.println("圆圈键被按下\n");
   }
 
@@ -274,4 +274,3 @@ void loop() {
 
   delay(50);
 }
-

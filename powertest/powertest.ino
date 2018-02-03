@@ -1,18 +1,18 @@
 //小车前进与后退
 
-int in1 = 0;
-int in2 = 1;
-int in3 = 2;
-int in4 = 3;
-int in5 = 4;
-int in6 = 5;
-int in7 = 6;
-int in8 = 7;
+int in1 = 2;
+int in2 = 3;
+int in3 = 4;
+int in4 = 5;
+int in5 = 6;
+int in6 = 7;
+int in7 = 8;
+int in8 = 9;
 
-int en1 = 8;
-int en2 = 9;
-int en3 = 10;
-int en4 = 11;
+int en1 = 10;
+int en2 = 11;
+int en3 = 12;
+int en4 = 13;
 
 void setup()
 {   
